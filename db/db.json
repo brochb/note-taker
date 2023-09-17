@@ -1,1 +1,11 @@
-[{"title":"Test Title","text":"Test text"},{"title":"Do the Dishes","text":"Don't forget to Dry them"},{"id":"d95c18cc-e759-43ba-93e3-ddde9e0682db"}]
+[
+    {
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "Do the Dishes",
+        "text": "Don't forget to Dry them",
+        "id": "d95c18cc-e759-43ba-93e3-ddde9e0682db"
+    }
+]
