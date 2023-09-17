@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "routes": "^2.1.0",
     "uuid": "^9.0.1"
   }
 }

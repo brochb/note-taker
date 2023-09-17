@@ -119,10 +119,16 @@ const handleRenderSaveBtn = () => {
 // Render the list of note titles
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
+  const noteList = document.querySelector('list-group');
+
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
-  }
+  } else if (jsonNotes.length === 0) {
+    noteList.innerHTML = '<li>No saved Notes</li>'
+  };
 
+
+  
   let noteListItems = [];
 
   // Returns HTML element with or without a delete button

@@ -29,17 +29,6 @@ app.get('/api/notes', (req, res) => {
   });
 });
 
-app.get('/api/notes', (req, res) => {
-  fs.readFile('./db/db.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ error: 'Failed to read notes' });
-    }
-    console.log('Get Success');
-    res.json(JSON.parse(data));
-  });
-});
-
 app.post('/api/notes', (req, res) => {
   const newNote = req.body;
   newNote.title = noteTitle.value
@@ -57,6 +46,12 @@ app.post('/api/notes', (req, res) => {
     res.json(newNote);
   });
 });
+
+// app.delete('/api/notes/:id', (req, res) => {
+//   const noteId = req.params.id;
+//   // Implement code to delete the note with the given ID from the db.json file.
+//   // Return an appropriate response.
+// });
 
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
