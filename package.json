@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "promises": "^0.2.5",
     "routes": "^2.1.0",
     "util": "^0.12.5",
     "uuid": "^9.0.1"
