@@ -57,7 +57,9 @@ notes.post('/', (req, res) => {
     }
 });
 
-
+const writeToFile = (filePath, data) => {
+    return fs.writeFile(filePath, JSON.stringify(data, null, 2));
+};
 
 notes.delete('/:id', (req, res) => {
     const noteId = req.params.id;
